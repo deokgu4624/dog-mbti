@@ -1,0 +1,2 @@
+export const EXTRAVERSION = 'EXTRAVERSION'
+export const INTROVERSION = 'INTROVERSION'

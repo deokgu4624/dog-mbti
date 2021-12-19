@@ -1,0 +1,42 @@
+.title{
+    font-size: 20px;
+    font-family: 'Roboto',sans-serif;
+    font-weight: 500;
+    color: black;
+    cursor: pointer;
+}
+.share{
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+.nav{
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.034) 1px 1px 10px;
+}
+.inputContainer{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.card{
+    border: none;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.212) 0 0 15px;
+}
+.copyWrapper{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+    background-color: #989898c2;
+    padding: 10px 20px;
+    border-radius: 50px;
+    display: none;
+    width: 200px;
+}
