@@ -34,7 +34,7 @@ const attentionFocus = (state=initialState, action) => {
 export default attentionFocus
 ```
 
-`Redux`를 사용하여 MBTI의 4가지 지표 (E, I) (S, N) (T, F) (J, P)를 대표하는 `action`을 만들어서 `Page1.js` 부터 `Page12.js`까지 있는 두가지 선택지 중 하나를 고를때 마다 연결되어있는 `action`으로 `count`값이 +1 또는 -1 이 되며, 예를 들어 `count`> 0 이면 E, `count` < 0
+`Redux`를 사용하여 MBTI의 4가지 지표 (E, I) (S, N) (T, F) (J, P)를 대표하는 `action`을 만들어서 `Page1.js` 부터 `Page12.js`까지 있는 두가지 선택지 중 하나를 고를때 마다 연결되어있는 `action`으로 `count`값이 +1 또는 -1 이 되며,
 
 ```javascript
 useEffect(()=>{
@@ -56,6 +56,8 @@ useEffect(()=>{
         
     }, [props])
 ```
+
+예를 들어 `count`> 0 이면 E, `count` < 0 이면 I 가 되는 식으로 성향이 결정되게 됩니다. 12문제를 모두 풀면 결정된 성향에 따라 결과 페이지로 넘어가는 방식입니다.
 
 ### `npm start`
 
