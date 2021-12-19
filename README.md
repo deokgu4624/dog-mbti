@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# 강아지 MBTI 웹사이트
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
