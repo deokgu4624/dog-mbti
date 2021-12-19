@@ -2,7 +2,7 @@
 
 `react` `react-bootstrap` `redux`
 
-## Available Scripts
+## 페이지 구조
 
 In the project directory, you can run:
 
