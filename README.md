@@ -59,8 +59,9 @@ useEffect(()=>{
 
 예를 들어 `count`> 0 이면 E, `count` < 0 이면 I 가 되는 식으로 성향이 결정되게 됩니다. 12문제를 모두 풀면 결정된 성향에 따라 결과 페이지로 넘어가는 방식입니다.
 
-## reducer.js
+## Redux
 
+### type.js
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
