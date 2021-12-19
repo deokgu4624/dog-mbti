@@ -4,7 +4,7 @@
 
 ## 페이지 구조
 
-In the project directory, you can run:
+`Home.js` 와 `Page1`~`Page12`까지의 질문이 있고, `ENFJ.js`~`ISTP.js` 16가지의 결과로 구성되어있습니다.
 
 ### `npm start`
 
