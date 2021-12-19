@@ -2,6 +2,8 @@
 
 `react` `redux` `react-bootstrap`
 
+자신은 어떤 강아지 성격과 비슷한지 알 수 있는 MBTI 테스트 사이트입니다.
+
 ![제목 없음](https://user-images.githubusercontent.com/37141223/146687467-e2f2af76-c827-4742-9e0c-c40f02ac8645.png)
 
 ## 페이지 구조
