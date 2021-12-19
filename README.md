@@ -6,6 +6,7 @@
 
 ![제목 없음](https://user-images.githubusercontent.com/37141223/146687467-e2f2af76-c827-4742-9e0c-c40f02ac8645.png)
 
+
 ## 페이지 구조
 
 `Home.js` 와 `Page1.js` 부터 `Page12.js` 까지의 질문 페이지가 있고, 선택지에 따라 결과를 계산하는 `ScoreManager.js` 그리고 `ENFJ.js` 부터 `ISTP.js` 까지 16가지의 결과 페이지 구성되어있습니다.
@@ -58,6 +59,7 @@ useEffect(()=>{
 ```
 
 예를 들어 `count`> 0 이면 E, `count` < 0 이면 I 가 되는 식으로 성향이 결정되게 됩니다. 12문제를 모두 풀면 결정된 성향에 따라 결과 페이지로 넘어가는 방식입니다.
+
 
 ## Redux
 
