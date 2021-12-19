@@ -1,6 +1,6 @@
 # 강아지 MBTI 웹사이트
 
-`React` `React-bootstrap` `Redux
+`react` `react-bootstrap` `redux`
 
 ## Available Scripts
 
