@@ -4,7 +4,7 @@
 
 ## 페이지 구조
 
-`Home.js` 와 `Page1` 부터 `Page12` 까지의 질문이 있고, `ENFJ.js` 부터 `ISTP.js` 까지 16가지의 결과로 구성되어있습니다.
+`Home.js` 와 `Page1` 부터 `Page12` 까지의 질문 페이지가 있고, 선택지에 따라 결과를 계산하는 `ScoreManager.js` 그리고 `ENFJ.js` 부터 `ISTP.js` 까지 16가지의 결과 페이지 구성되어있습니다.
 
 ### `npm start`
 
