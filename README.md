@@ -58,7 +58,7 @@ useEffect(()=>{
     }, [props])
 ```
 
-예를 들어 `count` > 0 이면 E, `count` < 0 이면 I 가 되는 식으로 성향이 결정되게 됩니다. 12문제를 모두 풀면 결정된 성향에 따라 결과 페이지로 넘어가는 방식입니다.
+예를 들어 `count` > 0 이면 E, `count` < 0 이면 I 가 되는 식으로 성격이 결정되게 됩니다. 12문제를 모두 풀면 결정된 성격에 따라 결과 페이지로 넘어가는 방식입니다.
 
 
 ## Redux
@@ -189,7 +189,7 @@ export default connect(mapStatetoProps, mapDispatchtoProps)(Page1)
     }, [props])
 ```
 
-`props`로 받아온 `count`값에 따라 조건문으로 성향이 결정되게 하였고,
+`props`로 받아온 `count`값에 따라 조건문으로 성이 결정되게 하였고,
 
 ```javascript
 const result = checkAttention+checkRecognition+checkJudgement+checkLifestyle
@@ -243,7 +243,7 @@ if(result === 'ISTP' && props.endCount === 2){
     window.location.pathname = '/istp'
 }
 ```
-결정된 성향에 따라서 16가지의 조건문으로 `pathname`을 사용하여 결과페이지로 넘어가도록 하였습니다.
+결정된 성에 따라서 16가지의 조건문으로 `pathname`을 사용하여 결과페이지로 넘어가도록 하였습니다.
 
 ### `npm run build`
 
