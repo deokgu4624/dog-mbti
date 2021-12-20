@@ -243,7 +243,7 @@ if(result === 'ISTP' && props.endCount === 2){
     window.location.pathname = '/istp'
 }
 ```
-결정된 성향에 따라서 `pathname`으로 넘어가도록 하였습니다.
+결정된 성향에 따라서 16가지의 조건문으로 `pathname`을 사용하여 결과페이지로 넘어가도록 하였습니다.
 
 ### `npm run build`
 
