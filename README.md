@@ -247,7 +247,7 @@ if(result === 'ISTP' && props.endCount === 2){
 
 ![제목 없음](https://user-images.githubusercontent.com/37141223/146825400-9f63bc72-e00a-421a-ae33-5781c25f939b.png)
 
-##ProgressBar.js
+## ProgressBar.js
 
 ```javascript
 const ProgressBar = (props) => {
