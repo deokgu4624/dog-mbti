@@ -144,7 +144,7 @@ const mapDispatchtoProps = {
 
 export default connect(mapStatetoProps, mapDispatchtoProps)(Page1)
 ```
-`redux`와 연결하는 부분인데 `mapDispatchtoProps`는 오브젝트 형태로 `extraversion`과 `introversion`에는 `actions.js`에서 가져온 `extraversion`과 `introversion`으로 맵핑을 시켰습니다.
+`redux`와 연결하는 부분인데 `mapDispatchtoProps`는 오브젝트 형태로 `extraversion`과 `introversion`에는 `actions.js`에서 가져온 `extraversion`과 `introversion`으로 맵핑을 시켰고,
 
 ![제목 없음](https://user-images.githubusercontent.com/37141223/146817946-6844ed5d-97e9-4238-a68b-91453e8e9083.png)
 
@@ -166,7 +166,84 @@ export default connect(mapStatetoProps, mapDispatchtoProps)(Page1)
 ```
 `<Button />` 클릭시 `props`로 받아온 함수가 실행되어 `dispatch`되도록 하였습니다.
 
+## ScoreManager.js
 
+```javascript
+    useEffect(()=>{
+        props.attentionCount > 0 ? setAttention('E')
+    :   props.attentionCount < 0 ? setAttention('I')
+    :   console.log('0입니다')
+
+        props.recognitionCount > 0 ? setRecognition('S')
+    :   props.recognitionCount < 0 ? setRecognition('N')
+    :   console.log('0입니다')
+
+        props.judgementCount > 0 ? setJudgement('T')
+    :   props.judgementCount < 0 ? setJudgement('F')
+    :   console.log('0입니다')
+
+        props.lifestyleCount > 0 ? setLifestyle('J')
+    :   props.lifestyleCount < 0 ? setLifestyle('P')
+    :   console.log('0입니다')
+        
+    }, [props])
+```
+
+`props`로 받아온 `count`값에 따라 조건문으로 성향이 결정되게 하였고,
+
+```javascript
+const result = checkAttention+checkRecognition+checkJudgement+checkLifestyle
+
+if(result === 'ENFJ' && props.endCount === 2){
+    window.location.pathname = '/enfj'
+}
+if(result === 'ENFP' && props.endCount === 2){
+    window.location.pathname = '/enfp'
+}
+if(result === 'ENTJ' && props.endCount === 2){
+    window.location.pathname = '/entj'
+}
+if(result === 'ENTP' && props.endCount === 2){
+    window.location.pathname = '/entp'
+}
+if(result === 'ESFJ' && props.endCount === 2){
+    window.location.pathname = '/esfj'
+}
+if(result === 'ESFP' && props.endCount === 2){
+    window.location.pathname = '/esfp'
+}
+if(result === 'ESTJ' && props.endCount === 2){
+    window.location.pathname = '/estj'
+}
+if(result === 'ESTP' && props.endCount === 2){
+    window.location.pathname = '/estp'
+}
+if(result === 'INFJ' && props.endCount === 2){
+    window.location.pathname = '/infj'
+}
+if(result === 'INFP' && props.endCount === 2){
+    window.location.pathname = '/infp'
+}
+if(result === 'INTJ' && props.endCount === 2){
+    window.location.pathname = '/intj'
+}
+if(result === 'INTP' && props.endCount === 2){
+    window.location.pathname = '/intp'
+}
+if(result === 'ISFJ' && props.endCount === 2){
+    window.location.pathname = '/isfj'
+}
+if(result === 'ISFP' && props.endCount === 2){
+    window.location.pathname = '/isfp'
+}
+if(result === 'ISTJ' && props.endCount === 2){
+    window.location.pathname = '/istj'
+}
+if(result === 'ISTP' && props.endCount === 2){
+    window.location.pathname = '/istp'
+}
+```
+결정된 성향에 따라서 `pathname`으로 넘어가도록 하였습니다.
 
 ### `npm run build`
 
