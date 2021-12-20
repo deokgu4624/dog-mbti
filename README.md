@@ -78,8 +78,32 @@ export const introversion = () =>{
     }
 }
 ```
+`action.js` 마다 2가지의 `action`을 만들어서 `action`이 무슨 역할을 하는지 `type`을 반환하였습니다.
 
-### type.js
+### reducer.js
+```javascript
+import { EXTRAVERSION, INTROVERSION } from "./types";
+const initialState = {
+    count : 0,
+}
+
+const attentionFocus = (state=initialState, action) => {
+    switch(action.type){
+        case EXTRAVERSION :
+            return{
+                ...state,
+                count: state.count + 1
+            }
+        case INTROVERSION :
+            return{
+                ...state,
+                count: state.count - 1
+            }
+        default: return state
+    }
+}
+export default attentionFocus
+```
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
