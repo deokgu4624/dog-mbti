@@ -246,3 +246,29 @@ if(result === 'ISTP' && props.endCount === 2){
 결정된 성에 따라서 16가지의 조건문으로 `pathname`을 사용하여 결과페이지로 넘어가도록 하였습니다.
 
 ![제목 없음](https://user-images.githubusercontent.com/37141223/146825400-9f63bc72-e00a-421a-ae33-5781c25f939b.png)
+
+##ProgressBar.js
+
+```javascript
+const ProgressBar = (props) => {
+    const pages = [1,2,3,4,5,6,7,8,9,10,11,12]
+    const [progress, setProgress] = useState('/')
+    useEffect(()=>{
+        setProgress(window.location.pathname)
+    }, [props])
+    return (
+        <Container>
+            <Row>
+                <Col xl={12}>
+                    {pages.map(function(item){
+                       return(
+                        progress === '/page='+item ? <div className={styles.progress} style={{width: item/12*100+'%'}} key={item}></div>:null
+                       ) 
+                    })}
+                </Col>
+            </Row>
+        </Container>
+    )
+}
+```
+페이지가 넘어갈 때 마다 바뀌어 진행도를 나타내는 바 입니다. 배열을 만들어서 `map`함수로 `item`만큼 반복시켜 페이지가 넘어갈 때마다 `width`값이 증가하도록 하였습니다. 
