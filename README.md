@@ -129,7 +129,8 @@ export default rootReducer
 ```
 `reducer` 가 여러개였기 때문에 `combineReducers`로 하나로 합칠 필요가 있었습니다.
 
-### `npm test`
+## Page1.js
+
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
