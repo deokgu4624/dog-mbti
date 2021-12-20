@@ -149,9 +149,22 @@ export default connect(mapStatetoProps, mapDispatchtoProps)(Page1)
 ![제목 없음](https://user-images.githubusercontent.com/37141223/146817946-6844ed5d-97e9-4238-a68b-91453e8e9083.png)
 
 ```javascript
-<Button variant="light" className={styles.btn} onClick={()=>props.extraversion()}>
+<motion.div
+    whileTap={{ scale: 0.97 }}
+>
+    <Link to={process.env.PUBLIC_URL+'/page=2'}>
+        <Button variant="light" className={styles.btn} onClick={()=>props.extraversion()}>사람들과 만나서 놀아야 한다. 집에 혼자 있으면 괜히 울적해지기만 한다.</Button>
+    </Link>
+</motion.div>
+<motion.div
+    whileTap={{ scale: 0.97 }}
+>
+    <Link to={process.env.PUBLIC_URL+'/page=2'}>
+        <Button variant="light" className={styles.btn} onClick={()=>props.introversion()}>집에서 조용히 쉬고 싶다. 이럴 때 나가봤자 기만 빨린다.</Button>
+    </Link>
+</motion.div>
 ```
-선택지 클릭시 `props`로 받아온 함수가 실행되어 `dispatch`되도록 하였습니다.
+`<Button />` 클릭시 `props`로 받아온 함수가 실행되어 `dispatch`되도록 하였습니다.
 
 
 
