@@ -1,6 +1,6 @@
 # 강아지 MBTI 웹사이트
 
-`react` `redux` `react-bootstrap`
+`react` `redux` `react-bootstrap` `
 
 자신은 어떤 강아지 성격과 비슷한지 알 수 있는 MBTI 테스트 사이트입니다.
 
