@@ -58,7 +58,7 @@ useEffect(()=>{
     }, [props])
 ```
 
-예를 들어 `count`> 0 이면 E, `count` < 0 이면 I 가 되는 식으로 성향이 결정되게 됩니다. 12문제를 모두 풀면 결정된 성향에 따라 결과 페이지로 넘어가는 방식입니다.
+예를 들어 `count` > 0 이면 E, `count` < 0 이면 I 가 되는 식으로 성향이 결정되게 됩니다. 12문제를 모두 풀면 결정된 성향에 따라 결과 페이지로 넘어가는 방식입니다.
 
 
 ## Redux
@@ -78,7 +78,7 @@ export const introversion = () =>{
     }
 }
 ```
-`action.js` 마다 2가지의 `action`을 만들어서 `action`이 무슨 역할을 하는지 `type`을 반환하였습니다.
+`action.js`마다 2가지의 `action`을 만들어서 `action`이 무슨 역할을 하는지 `type`을 반환하였습니다.
 
 ### reducer.js
 ```javascript
@@ -104,11 +104,30 @@ const attentionFocus = (state=initialState, action) => {
 }
 export default attentionFocus
 ```
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+`reducer`는 `action.js`의 `type`을 핸들링하기 위해서 `switch`문을 사용해서 처리하였습니다.
+예를 들어 `switch`문에 `EXTRAVERSION`타입이 들어가게되면 `state`를 그대로 복사를 하고 `count`값만 +1이 되는 방식입니다.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### rootReducer.js
+
+```javascript
+import { combineReducers } from "redux";
+import attentionFocus from './attentionFocus/reducer';
+import recognitionFn from './recognitionFn/reducer'
+import judgementFn from './judgementFn/reducer'
+import lifestyle from './lifestyle/reducer'
+import checkStart from './checkStart/reducer'
+
+const rootReducer = combineReducers({
+    attentionFocus,
+    recognitionFn,
+    judgementFn,
+    lifestyle,
+    checkStart
+})
+
+export default rootReducer
+```
+`reducer` 가 여러개였기 때문에 `combineReducers`로 하나로 합칠 필요가 있었습니다.
 
 ### `npm test`
 
