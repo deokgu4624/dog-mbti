@@ -63,7 +63,7 @@ useEffect(()=>{
 
 ## Redux
 
-### action.js
+### actions.js
 ```javascript
 import { EXTRAVERSION, INTROVERSION } from "./types";
 
@@ -78,7 +78,7 @@ export const introversion = () =>{
     }
 }
 ```
-`action.js`마다 2가지의 `action`을 만들어서 `action`이 무슨 역할을 하는지 `type`을 반환하였습니다.
+`actions.js`마다 2가지의 `action`을 만들어서 `action`이 무슨 역할을 하는지 `type`을 반환하였습니다.
 
 ### reducer.js
 ```javascript
@@ -104,7 +104,7 @@ const attentionFocus = (state=initialState, action) => {
 }
 export default attentionFocus
 ```
-`reducer`는 `action.js`의 `type`을 핸들링하기 위해서 `switch`문을 사용해서 처리하였습니다.
+`reducer`는 `actions.js`의 `type`을 핸들링하기 위해서 `switch`문을 사용해서 처리하였습니다.
 예를 들어 `switch`문에 `EXTRAVERSION`타입이 들어가게되면 `state`를 그대로 복사를 하고 `count`값만 +1이 되는 방식입니다.
 
 ### rootReducer.js
@@ -131,9 +131,29 @@ export default rootReducer
 
 ## Page1.js
 
+```javascript
+const mapStatetoProps = ({attentionFocus}) => {
+    return {
+        count: attentionFocus.count
+    }
+}
+const mapDispatchtoProps = {
+    extraversion,
+    introversion
+}
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+export default connect(mapStatetoProps, mapDispatchtoProps)(Page1)
+```
+`redux`와 연결하는 부분인데 `mapDispatchtoProps`는 오브젝트 형태로 `extraversion`과 `introversion`에는 `actions.js`에서 가져온 `extraversion`과 `introversion`으로 맵핑을 시켰습니다.
+
+![제목 없음](https://user-images.githubusercontent.com/37141223/146817946-6844ed5d-97e9-4238-a68b-91453e8e9083.png)
+
+```javascript
+<Button variant="light" className={styles.btn} onClick={()=>props.extraversion()}>
+```
+선택지 클릭시 `props`로 받아온 함수가 실행되어 `dispatch`되도록 하였습니다.
+
+
 
 ### `npm run build`
 
