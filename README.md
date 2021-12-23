@@ -7,7 +7,7 @@
 ![제목 없음](https://user-images.githubusercontent.com/37141223/146687467-e2f2af76-c827-4742-9e0c-c40f02ac8645.png)
 
 
-## 페이지 구조
+## 프로젝트 구조
 
 `Home.js` 와 `Page1.js` 부터 `Page12.js` 까지의 질문 페이지가 있고, 선택지에 따라 결과를 계산하는 `ScoreManager.js` 그리고 `ENFJ.js` 부터 `ISTP.js` 까지 16가지의 결과 페이지 구성되어있습니다.
 
